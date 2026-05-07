@@ -4,9 +4,10 @@
 
 
 .gradle/
-build/
+**/build/
 out/
 .claude/
+Simulated-Project/
 
 
 !gradle/wrapper/gradle-wrapper.jar

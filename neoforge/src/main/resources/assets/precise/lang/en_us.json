@@ -1,0 +1,44 @@
+{
+  "item.precise.precise_physics_staff": "Precise Physics Staff",
+
+  "precise.tooltip.hold_shift": "Hold %s for info",
+
+  "precise.tooltip.key.rmb": "Right-click",
+  "precise.tooltip.desc.rmb": "to select a contraption",
+  "precise.tooltip.key.lmb": "Left-click",
+  "precise.tooltip.desc.lmb": "to lock / unlock",
+
+  "precise.tooltip.selected": "When a contraption is selected: ",
+  "precise.tooltip.key.r": "R",
+  "precise.tooltip.desc.r": "to toggle rotation / movement mode",
+  "precise.tooltip.key.tab": "Hold Tab",
+  "precise.tooltip.desc.tab": "for finer rotation / movement ",
+  "precise.tooltip.key.enter_slash": "Enter",
+  "precise.tooltip.desc.enter_slash": "to open command mode",
+
+  "precise.tooltip.key.ws": "W/S",
+  "precise.tooltip.key.ad": "A/D",
+  "precise.tooltip.key.up_down": "Space / Shift",
+
+  "precise.tooltip.mode.rotate": "In rotation mode: ",
+  "precise.tooltip.desc.ws.rotate": "to pitch the contraption",
+  "precise.tooltip.desc.ad.rotate": "to yaw the contraption",
+  "precise.tooltip.key.shift": "Shift + A/D",
+  "precise.tooltip.desc.shift": "to roll the contraption",
+  "precise.tooltip.key.ctrl": "Hold Ctrl",
+  "precise.tooltip.desc.ctrl": "to rotate 90 degrees per step",
+
+  "precise.tooltip.mode.move": "In movement mode: ",
+  "precise.tooltip.desc.ws.move": "moves the contraption forward / backward",
+  "precise.tooltip.desc.ad.move": "moves the contraption left / right",
+  "precise.tooltip.desc.up_down.move": "moves the contraption up / down",
+
+  "precise.tooltip.hint": "Type \"Help\" in command mode for more information",
+
+  "key.categories.precise": "Precise Physics Staff",
+  "key.precise.fine_mode": "Fine Mode",
+  "key.precise.rotate_mode": "Toggle Rotation Mode",
+
+  "precise.mode.move": "Mode: Movement",
+  "precise.mode.rotate": "Mode: Rotation"
+}

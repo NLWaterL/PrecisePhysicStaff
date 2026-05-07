@@ -1,0 +1,75 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(java_version.toInteger())
+    withSourcesJar()
+}
+
+base {
+    archivesName.set("${mod_id}-neoforge-${minecraft_version}")
+}
+
+configurations {
+    commonJava { canBeResolved = true }
+    commonResources { canBeResolved = true }
+}
+
+dependencies {
+    commonJava project(path: ':common', configuration: 'commonJava')
+    commonResources project(path: ':common', configuration: 'commonResources')
+    compileOnly project(':common')
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+neoForge {
+    version = neoforge_version
+
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion  = parchment_version
+    }
+
+    runs {
+        client { client(); ideName = "Client" }
+        server { server(); ideName = "Server" }
+    }
+
+    mods {
+        precise {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+tasks.named('compileJava', JavaCompile) {
+    dependsOn configurations.commonJava
+    source configurations.commonJava
+}
+
+processResources {
+    def props = [ mod_id : mod_id,
+                  mod_name : mod_name,
+                  mod_author : mod_author,
+                  version : version,
+                  description : description,
+                  license : license,
+
+                  neoforge_version : neoforge_version,
+                  neoforge_loader_version_range: neoforge_loader_version_range,
+                  minecraft_version_range : minecraft_version_range,
+
+                  create_mod_version : create_mod_version,
+                  sable_mod_version : sable_mod_version,
+                  simulated_version : simulated_version, ]
+
+    filesMatching('META-INF/neoforge.mods.toml') { expand props }
+    inputs.properties(props)
+}
+
+tasks.named('sourcesJar', Jar) {
+    dependsOn configurations.commonJava,
+            configurations.commonResources from configurations.commonJava from configurations.commonResources
+}

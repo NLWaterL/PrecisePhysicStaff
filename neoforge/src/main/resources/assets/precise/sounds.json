@@ -1,0 +1,34 @@
+{
+  "item.precise_staff.grab": {
+    "sounds": [
+      {
+        "type": "event",
+        "name": "simulated:item.physics_staff.ignite"
+      }
+    ]
+  },
+  "item.precise_staff.release": {
+    "sounds": [
+      {
+        "type": "event",
+        "name": "simulated:item.physics_staff.extinguish"
+      }
+    ]
+  },
+  "item.precise_staff.mode_switch": {
+    "sounds": [
+      {
+        "type": "event",
+        "name": "simulated:item.physics_staff.lock"
+      }
+    ]
+  },
+  "item.precise_staff.idle": {
+    "sounds": [
+      {
+        "type": "event",
+        "name": "simulated:item.physics_staff.idle"
+      }
+    ]
+  }
+}

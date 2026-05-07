@@ -1,0 +1,44 @@
+{
+  "item.precise.precise_physics_staff": "精准物理手杖",
+
+  "precise.tooltip.hold_shift": "按住 %s 查看详情",
+
+  "precise.tooltip.key.rmb": "右键",
+  "precise.tooltip.desc.rmb": "选取物理结构",
+  "precise.tooltip.key.lmb": "左键",
+  "precise.tooltip.desc.lmb": "锁定/解锁",
+
+  "precise.tooltip.selected": "选中物理结构时: ",
+  "precise.tooltip.key.r": "R",
+  "precise.tooltip.desc.r": "切换旋转/移动模式",
+  "precise.tooltip.key.tab": "长按Tab时",
+  "precise.tooltip.desc.tab": "旋转/移动更加精细",
+  "precise.tooltip.key.enter_slash": "Enter",
+  "precise.tooltip.desc.enter_slash": "进入命令模式",
+
+  "precise.tooltip.key.ws": "W/S",
+  "precise.tooltip.key.ad": "A/D",
+  "precise.tooltip.key.up_down": "空格 / Shift",
+
+  "precise.tooltip.mode.rotate": "旋转模式时: ",
+  "precise.tooltip.desc.ws.rotate": "控制俯仰",
+  "precise.tooltip.desc.ad.rotate": "控制朝向",
+  "precise.tooltip.key.shift": "Shift + A/D",
+  "precise.tooltip.desc.shift": "控制翻转",
+  "precise.tooltip.key.ctrl": "长按Ctrl时",
+  "precise.tooltip.desc.ctrl": "每次旋转90度",
+
+  "precise.tooltip.mode.move": "移动模式时: ",
+  "precise.tooltip.desc.ws.move": "控制前后",
+  "precise.tooltip.desc.ad.move": "控制左右",
+  "precise.tooltip.desc.up_down.move": "控制上下",
+
+  "precise.tooltip.hint": "在命令模式中输入 \"Help\" 获取更多信息",
+
+  "key.categories.precise": "精准物理权杖",
+  "key.precise.fine_mode": "精细模式",
+  "key.precise.rotate_mode": "切换旋转模式",
+
+  "precise.mode.move": "移动模式",
+  "precise.mode.rotate": "旋转模式"
+}

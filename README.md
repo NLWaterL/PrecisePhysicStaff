@@ -1,6 +1,6 @@
  Description
  ---
- A mod that adds a powerful tool to manipulate the physcis contraptions from Create Aeronautics.
+ A mod that adds a powerful tool to manipulate the physics contraptions from Create Aeronautics.
 
  License
  ---

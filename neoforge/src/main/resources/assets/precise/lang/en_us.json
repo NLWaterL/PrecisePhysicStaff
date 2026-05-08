@@ -35,6 +35,64 @@
 
   "precise.tooltip.hint": "Type \"Help\" in command mode for more information",
 
+  "precise.error.unknown_command":   "Unknown command: \"%s\"",
+  "precise.error.cannot_understand": "Cannot understand \"%s\"",
+  "precise.error.no_params":         "The \"%s\" command does not take any parameters",
+  "precise.error.need_params":       "The \"%s\" command requires parameters",
+  "precise.error.out_of_range":      "Value out of range (%s, %s)",
+  "precise.error.no_help":           "Currently no help page for: \"%s\"",
+
+  "precise.help.help.1": "§fUsage: §bHELP§f [Command]",
+  "precise.help.help.2": "Displays information about the specified command.",
+  "precise.help.help.3": "",
+  "precise.help.help.4": "§fAvailable commands: §eRX§7, §eRY§7, §eRZ§7, §eR§7, §eG§7, §eX§7, §eY§7, §eZ§7, §eW§7, §eA§7, §eS§7, §eD",
+
+  "precise.help.rx.1": "§fUsage: §bRX§f [Angle] (-360, 360)",
+  "precise.help.rx.2": "Rotates the contraption by the specified angle clockwise around its §6local X-axis§7 (Viewed from §6+X§7)",
+
+  "precise.help.ry.1": "§fUsage: §bRY§f [Angle] (-360, 360)",
+  "precise.help.ry.2": "Rotates the contraption by the specified angle clockwise around its §6local Y-axis§7 (Viewed from §6-Y§7)",
+
+  "precise.help.rz.1": "§fUsage: §bRZ§f [Angle] (-360, 360)",
+  "precise.help.rz.2": "Rotates the contraption by the specified angle clockwise around its §6local Z-axis§7 (Viewed from §6+Z§7)",
+
+  "precise.help.r.1":  "§fUsage: §bR§f [Angle] (-360, 360)",
+  "precise.help.r.2":  "Rotates the contraption by the specified angle clockwise (§6Camera relative§7)",
+
+  "precise.help.grid.1": "§fUsage: §bGRID§f (No Parameters)",
+  "precise.help.grid.2": "Snaps the contraption to the §6block grid§7",
+  "precise.help.grid.3": "",
+  "precise.help.grid.4": "§fNote: §eG§7 is a shortcut for this command",
+
+  "precise.help.x.1": "§fUsage: §bX§f [Distance] (-128, 128)",
+  "precise.help.x.2": "Moves the contraption by the specified distance forward (positive) or backward (negative) along the §6world x-axis§7",
+
+  "precise.help.y.1": "§fUsage: §bY§f [Distance] (-128, 128)",
+  "precise.help.y.2": "Moves the contraption by the specified distance upward (positive) or downward (negative) along the §6world y-axis§7",
+
+  "precise.help.z.1": "§fUsage: §bZ§f [Distance] (-128, 128)",
+  "precise.help.z.2": "Moves the contraption by the specified distance forward (positive) or backward (negative) along the §6world z-axis§7",
+
+  "precise.help.w.1": "§fUsage: §bW§f [Distance] (-128, 128)",
+  "precise.help.w.2": "Moves the contraption by the specified distance forward along the §6world axis§7 closest to the player's looking direction",
+  "precise.help.w.3": "",
+  "precise.help.w.4": "§fNote: §eW/A/S/D§7 commands only supports moving horizontally. To move vertically, use the §eY§7 command",
+
+  "precise.help.a.1": "§fUsage: §bA§f [Distance] (-128, 128)",
+  "precise.help.a.2": "Moves the contraption by the specified distance left along the §6world axis§7 closest to the player's looking direction",
+  "precise.help.a.3": "",
+  "precise.help.a.4": "§fNote: §eW/A/S/D§7 commands only supports moving horizontally. To move vertically, use the §eY§7 command",
+
+  "precise.help.s.1": "§fUsage: §bS§f [Distance] (-128, 128)",
+  "precise.help.s.2": "Moves the contraption by the specified distance backward along the §6world axis§7 closest to the player's looking direction",
+  "precise.help.s.3": "",
+  "precise.help.s.4": "§fNote: §eW/A/S/D§7 commands only supports moving horizontally. To move vertically, use the §eY§7 command",
+
+  "precise.help.d.1": "§fUsage: §bD§f [Distance] (-128, 128)",
+  "precise.help.d.2": "Moves the contraption by the specified distance right along the §6world axis§7 closest to the player's looking direction",
+  "precise.help.d.3": "",
+  "precise.help.d.4": "§fNote: §eW/A/S/D§7 commands only supports moving horizontally. To move vertically, use the §eY§7 command",
+
   "key.categories.precise": "Precise Physics Staff",
   "key.precise.fine_mode": "Fine Mode",
   "key.precise.rotate_mode": "Toggle Rotation Mode",

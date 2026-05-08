@@ -35,6 +35,64 @@
 
   "precise.tooltip.hint": "在命令模式中输入 \"Help\" 获取更多信息",
 
+  "precise.error.unknown_command":   "未知命令: \"%s\"",
+  "precise.error.cannot_understand": "无法理解 \"%s\"",
+  "precise.error.no_params":         "\"%s\" 命令不接受任何参数",
+  "precise.error.need_params":       "\"%s\" 命令需要参数",
+  "precise.error.out_of_range":      "参数超出范围 (%s, %s)",
+  "precise.error.no_help":           "目前没有关于\"%s\"的帮助页面",
+
+  "precise.help.help.1": "§f此命令的用法是: §bHELP§f [命令]",
+  "precise.help.help.2": "显示关于指定命令的信息。",
+  "precise.help.help.3": "",
+  "precise.help.help.4": "§f可用的命令: §eRX§7, §eRY§7, §eRZ§7, §eR§7, §eG§7, §eX§7, §eY§7, §eZ§7, §eW§7, §eA§7, §eS§7, §eD",
+
+  "precise.help.rx.1": "§f此命令的用法是: §bRX§f [角度] (-360, 360)",
+  "precise.help.rx.2": "将物理结构绕其§6结构X轴§7顺时针旋转指定的角度 (从§6正X方向§7)",
+
+  "precise.help.ry.1": "§f此命令的用法是: §bRY§f [角度] (-360, 360)",
+  "precise.help.ry.2": "将物理结构绕其§6结构Y轴§7顺时针旋转指定的角度 (从§6负Y方向§7)",
+
+  "precise.help.rz.1": "§f此命令的用法是: §bRZ§f [角度] (-360, 360)",
+  "precise.help.rz.2": "将物理结构绕其§6结构Z轴§7顺时针旋转指定的角度 (从§6正Z方向§7)",
+
+  "precise.help.r.1": "§f此命令的用法是: §bR§f [角度] (-360, 360)",
+  "precise.help.r.2": "将物理结构绕§6玩家视线方向§7顺时针旋转指定的角度",
+
+  "precise.help.grid.1": "§f此命令的用法是: §bGRID§f (无参数)",
+  "precise.help.grid.2": "将物理结构对齐到§6方块网格§7上",
+  "precise.help.grid.3": "",
+  "precise.help.grid.4": "§f提示: §eG§7 和 §eGRID§7 是同一个命令",
+
+  "precise.help.x.1": "§f此命令的用法是: §bX§f [距离] (-128, 128)",
+  "precise.help.x.2": "将物理结构沿§6世界x轴§7移动指定的距离",
+
+  "precise.help.y.1": "§f此命令的用法是: §bY§f [距离] (-128, 128)",
+  "precise.help.y.2": "将物理结构沿§6世界y轴§7移动指定的距离",
+
+  "precise.help.z.1": "§f此命令的用法是: §bZ§f [距离] (-128, 128)",
+  "precise.help.z.2": "将物理结构沿§6世界z轴§7移动指定的距离",
+
+  "precise.help.w.1": "§f此命令的用法是: §bW§f [距离] (-128, 128)",
+  "precise.help.w.2": "根据玩家当前视线，选择最接近的§6世界坐标轴§7向前移动物理结构",
+  "precise.help.w.3": "",
+  "precise.help.w.4": "§f提示: §eW/A/S/D§7 命令只能在水平方向移动物理结构。若要上下移动，请使用 §eY§7 命令",
+
+  "precise.help.a.1": "§f此命令的用法是: §bA§f [距离] (-128, 128)",
+  "precise.help.a.2": "根据玩家当前视线，选择最接近的§6世界坐标轴§7向左移动物理结构",
+  "precise.help.a.3": "",
+  "precise.help.a.4": "§f提示: §eW/A/S/D§7 命令只能在水平方向移动物理结构。若要上下移动，请使用 §eY§7 命令",
+
+  "precise.help.s.1": "§f此命令的用法是: §bS§f [距离] (-128, 128)",
+  "precise.help.s.2": "根据玩家当前视线，选择最接近的§6世界坐标轴§7向后移动物理结构",
+  "precise.help.s.3": "",
+  "precise.help.s.4": "§f提示: §eW/A/S/D§7 命令只能在水平方向移动物理结构。若要上下移动，请使用 §eY§7 命令",
+
+  "precise.help.d.1": "§f此命令的用法是: §bD§f [距离] (-128, 128)",
+  "precise.help.d.2": "根据玩家当前视线，选择最接近的§6世界坐标轴§7向右移动物理结构",
+  "precise.help.d.3": "",
+  "precise.help.d.4": "§f提示: §eW/A/S/D§7 命令只能在水平方向移动物理结构。若要上下移动，请使用 §eY§7 命令",
+
   "key.categories.precise": "精准物理权杖",
   "key.precise.fine_mode": "精细模式",
   "key.precise.rotate_mode": "切换旋转模式",

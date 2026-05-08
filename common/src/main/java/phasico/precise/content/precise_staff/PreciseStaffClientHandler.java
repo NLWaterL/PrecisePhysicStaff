@@ -8,7 +8,9 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
@@ -46,6 +48,13 @@ public class PreciseStaffClientHandler {
     private final Vec3[] committedRotAxis = new Vec3[4];
     // Set by translation commands so tick() doesn't re-anchor targetPos before the body moves.
     private boolean hasManualTarget = false;
+
+    // Single source of truth for all command names — used both for parsing (prefix-match
+    // in executeCommand) and for HELP-topic validation. Order matters: longer prefixes
+    // must come before shorter ones (RX before R, GRID before G).
+    private static final String[] COMMANDS = {
+            "HELP", "RX", "RY", "RZ", "GRID", "R", "G", "X", "Y", "Z", "W", "A", "S", "D"
+    };
 
     public boolean isDragging() { return session != null; }
     public boolean isRotateMode() { return rotateMode; }
@@ -239,8 +248,7 @@ public class PreciseStaffClientHandler {
         String input = raw.trim().toUpperCase();
         String cmd = null;
         String valStr = null;
-        // Longer prefixes must come before shorter ones (RX/RY/RZ before R, GRID before G).
-        for (String c : new String[]{"RX", "RY", "RZ", "GRID", "R", "G", "X", "Y", "Z", "W", "A", "S", "D"}) {
+        for (String c : COMMANDS) {
             if (input.startsWith(c)) {
                 cmd = c;
                 valStr = input.substring(c.length()).trim();
@@ -249,7 +257,15 @@ public class PreciseStaffClientHandler {
         }
 
         if (cmd == null) {
-            showCommandError(player, "Unknown command: " + raw.trim());
+            showCommandError(player, Component.translatable("precise.error.unknown_command", raw.trim()));
+            return;
+        }
+
+        // HELP: optional command-name parameter; no parameter shows help for HELP itself.
+        if (cmd.equals("HELP")) {
+            String topic = valStr.isEmpty() ? "HELP" : valStr;
+            if (topic.equals("G")) topic = "GRID"; // G and GRID share one help entry.
+            showHelp(player, topic);
             return;
         }
 
@@ -258,7 +274,7 @@ public class PreciseStaffClientHandler {
 
             if(!valStr.isEmpty()){
 
-                showCommandError(player, "The command \"" + cmd + "\" does not accept any parameters.");
+                showCommandError(player, Component.translatable("precise.error.no_params", cmd));
 
             }
 
@@ -270,7 +286,7 @@ public class PreciseStaffClientHandler {
 
         if (valStr.isEmpty()) {
 
-            showCommandError(player, "The syntax of \"" + cmd +  "\" is: " + cmd + " [value]");
+            showCommandError(player, Component.translatable("precise.error.need_params", cmd));
             return;
         }
 
@@ -279,13 +295,13 @@ public class PreciseStaffClientHandler {
         try {
             value = Double.parseDouble(valStr);
         } catch (NumberFormatException e) {
-            showCommandError(player, "Cannot understand \"" + valStr + "\"");
+            showCommandError(player, Component.translatable("precise.error.cannot_understand", valStr));
             return;
         }
 
         double limit = cmd.startsWith("R") ? 360.0 : 128.0;
         if (value < -limit || value > limit) {
-            showCommandError(player, "Value out of range [-" + (int) limit + ", " + (int) limit + "]");
+            showCommandError(player, Component.translatable("precise.error.out_of_range", -(int) limit, (int) limit));
             return;
         }
 
@@ -414,10 +430,32 @@ public class PreciseStaffClientHandler {
         return m.getNormalizedRotation(new Quaterniond());
     }
 
-    private static void showCommandError(LocalPlayer player, String msg) {
+    private static void showCommandError(LocalPlayer player, MutableComponent msg) {
         if (player != null)
             player.displayClientMessage(
-                    Component.literal(msg).withStyle(s -> s.withColor(0xFF5555)), true);
+                    msg.withStyle(s -> s.withColor(0xFF5555)), true);
+    }
+
+    private static void showHelp(LocalPlayer player, String topic) {
+        if (player == null) return;
+        if (!java.util.Arrays.asList(COMMANDS).contains(topic)) {
+            showCommandError(player, Component.translatable("precise.error.no_help", topic));
+            return;
+        }
+        // Probe lang keys precise.help.<cmd>.1, .2, ... until one is missing.
+        // This lets each command have its own number of lines without code changes.
+        String prefix = "precise.help." + topic.toLowerCase() + ".";
+        Language lang = Language.getInstance();
+
+        // Clear existing chat so the help text reads cleanly.
+        Minecraft.getInstance().gui.getChat().clearMessages(false);
+
+        player.displayClientMessage(Component.empty(), false);
+        for (int i = 1; lang.has(prefix + i); i++) {
+            player.displayClientMessage(
+                    Component.translatable(prefix + i).withStyle(net.minecraft.ChatFormatting.GRAY), false);
+        }
+        player.displayClientMessage(Component.empty(), false);
     }
 
     private void sendLockPacket(java.util.UUID subLevelUUID) {

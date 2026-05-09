@@ -40,7 +40,7 @@
   "precise.error.no_params":         "The \"%s\" command does not take any parameters",
   "precise.error.need_params":       "The \"%s\" command requires parameters",
   "precise.error.out_of_range":      "Value out of range (%s, %s)",
-  "precise.error.no_help":           "Currently no help page for: \"%s\"",
+  "precise.error.no_help":           "Currently no help page for \"%s\"",
 
   "precise.help.help.1": "§fUsage: §bHELP§f [Command]",
   "precise.help.help.2": "Displays information about the specified command.",

@@ -58,7 +58,7 @@ Positive values rotate clockwise from the indicated viewpoint.
 
 | Command                            | Direction                                                                                                         |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| `X` / `Y` / `Z` `[Distance]`       | Move along world X / Y / Z axes                                                                                   |
+| `X` / `Y` / `Z` `[Distance]`       | Move along world X / Y / Z axis                                                                                   |
 | `W` / `A` / `S` / `D` `[Distance]` | Move forward / left / backward / right relative to your view (snapped to the nearest world axis; horizontal only) |
 
 #### Utility commands

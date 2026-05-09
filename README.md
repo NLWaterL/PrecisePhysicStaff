@@ -54,7 +54,7 @@ Positive values rotate clockwise from the indicated viewpoint.
 | `RZ [Angle]` | Contraption-local Z (clockwise viewed from +Z)                           |
 | `R [Angle]`  | The contraption-local axis that best matches your current look direction |
 
-#### Movements commands (value: distance in blocks, range −128 to 128)
+#### Movements commands
 
 | Command                            | Direction                                                                                                         |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------|

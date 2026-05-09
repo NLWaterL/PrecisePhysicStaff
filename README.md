@@ -26,7 +26,7 @@ The direction is camera-relative.
 
 ### Rotation mode
 
-Rotations are performed around **world axis** derived from your view direction.
+Rotations are performed around **world axis** that matches your view direction the best.
 
 | Key                       | Action                                                |
 |---------------------------|-------------------------------------------------------|
@@ -41,27 +41,27 @@ Rotations are performed around **world axis** derived from your view direction.
 
 ### Command mode
 
-Press **Enter** or **/** while a contraption is selected to open the command input. Commands are case-insensitive.
+- Press **Enter** or **/** while a contraption is selected to open the command input. Commands are case-insensitive.
+- You don't need to type a space between the command and the parameter.
+- All rotation / movement commands accept decimals.
 
-#### Rotation commands
+### Rotation commands
 
-Positive values rotate clockwise from the indicated viewpoint.
-
-| Command      | Axis                                                                     |
+| Command      | Rotation Axis                                                            |
 |--------------|--------------------------------------------------------------------------|
 | `RX [Angle]` | Contraption-local X (clockwise viewed from +X)                           |
 | `RY [Angle]` | Contraption-local Y (clockwise viewed from above)                        |
 | `RZ [Angle]` | Contraption-local Z (clockwise viewed from +Z)                           |
 | `R [Angle]`  | The contraption-local axis that best matches your current look direction |
 
-#### Movements commands
+### Movement commands
 
 | Command                            | Direction                                                                                                         |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | `X` / `Y` / `Z` `[Distance]`       | Move along world X / Y / Z axis                                                                                   |
 | `W` / `A` / `S` / `D` `[Distance]` | Move forward / left / backward / right relative to your view (snapped to the nearest world axis; horizontal only) |
 
-#### Utility commands
+### Utility commands
 
 | Command          | Behavior                                          |
 |------------------|---------------------------------------------------|
